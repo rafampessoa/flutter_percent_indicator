@@ -437,6 +437,7 @@ class _CirclePainter extends CustomPainter {
           correction = math.atan(_paintLine.strokeWidth / 2 / radius);
         }
         _paintLine.shader = SweepGradient(
+          stops: linearGradient!.stops,
           transform: reverse
               ? GradientRotation(
                   radians(-90 - progress + startAngle) - correction)
